@@ -29,10 +29,10 @@
         state: present
 
     - ansible.builtin.apt_repository:
-      repo: "deb https://packages.adoptium.net/artifactory/deb {{ ansible_facts.distribution_release }} main"
-      filename: "adoptium"
-      state: present
-      update_cache: true
+        repo: "deb https://packages.adoptium.net/artifactory/deb {{ ansible_facts.distribution_release }} main"
+        filename: "adoptium"
+        state: present
+        update_cache: true
 
     - ansible.builtin.apt:
         update_cache: true
